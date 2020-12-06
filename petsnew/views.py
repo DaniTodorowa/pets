@@ -10,7 +10,7 @@ def list_pets(request):
         'pets': Pet.objects.all(),
 
     }
-    return render(request, 'pets/pets_list.html', context)
+    return render(request, 'handmade/pets/pets_list.html', context)
 
 
 def show_pet_details(request, pk):
@@ -18,7 +18,7 @@ def show_pet_details(request, pk):
         'pet': Pet.objects.get(pk=pk),
 
     }
-    return render(request, 'pets/pets_details.html', context)
+    return render(request, 'handmade/pets/pets_details.html', context)
 
 
 def like_pet(request):
