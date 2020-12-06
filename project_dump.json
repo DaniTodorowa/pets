@@ -1,0 +1,46 @@
+[
+{
+    "model": "auth.user",
+    "fields": {
+        "password": "pbkdf2_sha256$216000$3J8NuptWjH6b$oEpKuc9hmBaUUn4a3sYYjXoSzHNRAHzFNJS+OnKYAIc=",
+        "last_login": "2020-12-05T22:52:44.848Z",
+        "is_superuser": true,
+        "username": "petsadmin",
+        "first_name": "",
+        "last_name": "",
+        "email": "",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2020-12-05T20:31:12.054Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "abgea81nk7hb7puaovrzhpwnwbwajln5",
+    "fields": {
+        "session_data": ".eJxVjDsOwjAQRO_iGlkx_lPScwZrd73BAWRLcVIh7k4ipYBy5r2Zt0iwLiWtnec0ZXERSpx-OwR6ct1BfkC9N0mtLvOEclfkQbu8tcyv6-H-HRToZVufdUA0LkfyBq3nQYE3Rm0ZWI-MOULA4GM0FO3I2gVUjmCwVqtAIYvPF-zFOBo:1kleDV:M4QChB9DrhyYVykffW1XnGqcIqjg0PHSUC6TNMhagTE",
+        "expire_date": "2020-12-19T20:31:41.395Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "xysvgogmvzu8r6m6jg9nya9dic4dnv1i",
+    "fields": {
+        "session_data": ".eJxVjDsOwjAQRO_iGlkx_lPScwZrd73BAWRLcVIh7k4ipYBy5r2Zt0iwLiWtnec0ZXERSpx-OwR6ct1BfkC9N0mtLvOEclfkQbu8tcyv6-H-HRToZVufdUA0LkfyBq3nQYE3Rm0ZWI-MOULA4GM0FO3I2gVUjmCwVqtAIYvPF-zFOBo:1klgQ0:r49TnGZbPSZn4mP4PttC4ALiYn-l8x6k_49e-h-lNc4",
+        "expire_date": "2020-12-19T22:52:44.859Z"
+    }
+},
+{
+    "model": "petsnew.pet",
+    "pk": 1,
+    "fields": {
+        "type": "DOG",
+        "name": "Gogo",
+        "age": 2,
+        "description": "This  doggy is very cute",
+        "image_url": "https://i.ytimg.com/vi/MPV2METPeJU/maxresdefault.jpg"
+    }
+}
+    ]
