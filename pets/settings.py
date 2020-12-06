@@ -1,5 +1,6 @@
 from os.path import join
 from pathlib import Path
+import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -12,7 +13,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '_w-vyyaux3i$8@8pa^15$0d&bh3m+%#t8*&m+k^(a#2ir7pdws'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = []
 
@@ -30,6 +31,7 @@ INSTALLED_APPS = [
     'petsnew',
     'gunicorn',
     'heroku',
+
 ]
 
 MIDDLEWARE = [
@@ -40,6 +42,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'pets.urls'
@@ -67,15 +70,16 @@ WSGI_APPLICATION = 'pets.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'pets_db',
-        'USER': 'postgres',
-        'PASSWORD': 'postgres',
-        'HOST': 'localhost',
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'pets_db',
+#         'USER': 'postgres',
+#         'PASSWORD': 'postgres',
+#         'HOST': 'localhost',
+#     }
+# }
+DATABASES = {'default': dj_database_url.config(default='postgres://postgres:postgres@localhost/pets_db')}
 
 
 # Password validation
@@ -120,3 +124,6 @@ STATIC_ROOT = ''
 STATICFILES_DIRS = (
     join(BASE_DIR, 'static'),
 )
+
+#whitenoise settings
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
